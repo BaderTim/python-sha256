@@ -69,7 +69,7 @@ def message_padding(input_string):
 
 def message_scheduling(message_chunk):
     """
-    -- STEP 1: SCHEDULING --
+    -- STEP 2: SCHEDULING --
     - splits 512bit message into 16 32bit words
     - generates 48 more words with existing words and bit operations
     :param message_chunk: 512 bit long message chunk
@@ -108,6 +108,8 @@ def message_scheduling(message_chunk):
 
 def compression(word_chunks, bit_hash_constants):
     """
+    -- STEP 3: COMPRESSION --
+    - mutates input constants with input words and bit operations 64 times
     :param word_chunks: 64 long array of 32 bit words
     :param bit_hash_constants: constants for mutating
     :return: returns mutated constants
@@ -277,7 +279,7 @@ def add(array_alpha, array_beta):
 def sha256(input_string):
     """
     !ENTRY POINT!
-     - SHA256 core function: padding -> message scheduling
+     - SHA256 core function: padding -> (message scheduling -> word compression)* -> conversion to hexadecimal
     :param input_string: input string to hash
     :return: sha256 hash of string
     """
