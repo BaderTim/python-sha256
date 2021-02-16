@@ -109,7 +109,9 @@ def message_scheduling(message_chunk):
 def compression(word_chunks, bit_hash_constants):
     """
     -- STEP 3: COMPRESSION --
-    - mutates input constants with input words and bit operations 64 times
+    - loop (n=64):
+        - bit operations with constants and word chunks
+        - mutate constants
     :param word_chunks: 64 long array of 32 bit words
     :param bit_hash_constants: constants for mutating
     :return: returns mutated constants
