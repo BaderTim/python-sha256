@@ -39,7 +39,7 @@ def hexadecimal_to_bit_array(input_hexadecimal, bit_length):
 
 def int_to_bit_array(input_int):
     """
-    :param input_int: integer
+    :param input_int: input integer
     :return: integer list of binary representation of input_int
     """
     big_endian = "{0:b}".format(input_int)
