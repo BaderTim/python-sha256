@@ -315,6 +315,6 @@ def sha256(input_string):
 
 
 if __name__ == "__main__":
-    word = "hello world"
+    word = input("Input: ")
     print(f"Hashing '{word}' ...")
     print(f"Result: {sha256(word)}")
