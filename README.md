@@ -5,4 +5,7 @@ Hashing algorithm SHA-256 in Python language.
 - **Main.py:** main file which contains the sha-256 functions
   
 ## How to use
-Make sure both files are in the same folder. Run Main.py and enter the text that you would like to hash.
+- Clone repository
+- Open console in root folder
+- Execute `$ python main.py` (requires Python 3.\*)
+- A prompt will ask you to enter the text that should get hashed
